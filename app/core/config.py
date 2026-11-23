@@ -11,6 +11,6 @@ class Settings(BaseSettings):
     APP_NAME: str
     APP_VERSION: str
     APP_DESCRIPTION: str
-
+    database_url: str
 
 settings = Settings()
