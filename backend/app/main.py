@@ -1,5 +1,7 @@
+
 from fastapi import FastAPI
 from app.core.config import settings
+from app.routers import book
 
 
 app = FastAPI(
@@ -7,6 +9,9 @@ app = FastAPI(
     description=settings.APP_DESCRIPTION,
     version=settings.APP_VERSION
 )
+
+
+app.include_router(book.router)
 
 
 @app.get("/health")
